@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+body{
+   background-color: rgba(208, 208, 208, 0.22);
+}
+.topNav{
+  width: 100%;
+}
+.logo{
+  font-weight: 900;
+  font-size: 30px;
+  margin-right: 340px;
+}
+.nva_custom{
+  padding: 1% 10%;
+  background: transparent;
+}
+.myNav{
+  gap: 40px;
+}
+.myNav li a{
+  font-size: 18px;
+  font-weight: 800;
+}
+.myNav li a:hover{
+  color: rgb(252, 105, 0);
+}
+.myNav .nav-item .active{
+  color: rgb(252, 105, 0);
+}
+.thebar i{
+  font-size: 30px;
+  font-weight: 900;
+  color: red;
+}
+.banner {
+  width: 100%;
+  height: 49vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner .half {
+  width: 55%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.banner .red {
+  background-color: rgb(69, 190, 242);
+  left: -5%;
+  transform: skewX(-10deg);
+  transform-origin: bottom left;
+  z-index: -1;
+}
+
+.banner .green {
+  background-color:#EFF7FA;
+  right: -5%;
+  transform: skewX(10deg);
+  transform-origin: bottom right;
+  z-index: -1;
+
+}
+.left_box{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  margin-top: 140px;
+  margin-left: 140px;
+}
+.left_box h1{
+  font-size: 60px;
+  font-weight: 800;
+}
+.left_box p{
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.428);
+  margin-top: 10px;
+}
+.btnME p{
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+  margin-top: 40px;
+  width: 180px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.btnME p:active{
+  /* From https://css.glass */
+background: rgba(0, 0, 0, 0.12);
+backdrop-filter: blur(1.6px);
+-webkit-backdrop-filter: blur(1.6px);
+}
+.imgBox{
+  width: 450px;
+  position: relative;
+
+}
+.imgBox img{
+  width: 100%;
+  margin-top: 40px;
+  position: absolute;
+  top: 40px;
+  left: -46%;
+}
+.myBox p{
+  position: absolute;
+  width: 300px;
+  right: 36%;
+  top: 50%;
+ transform: skewX(-10deg);
+ color: #090707ad;
+}
+.myBox p span{
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.782);
+}
+.myBox p::first-letter{
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  font-style: italic;
+}
+img {
+ display: block;
+ max-width: 100%;
+ height: auto;
+}
+
+.grid_box {
+ display: grid;
+ place-items: center;
+ margin-inline: 1.5rem;
+ padding-block: 5rem;
+ justify-items: center;
+ align-items: start;
+}
+
+.card_container {
+ display: grid;
+ row-gap: 7rem;
+ margin-top: 50px;
+
+}
+
+.card_box {
+ position: relative;
+ overflow: hidden;
+}
+
+.card_img {
+ width: 328px;
+ border-radius: 1.5rem;
+}
+
+.card_content {
+
+   /* From https://css.glass */
+
+
+ width: 280px;
+ background: rgba(13, 13, 13, 0.254);
+ border-radius: 16px;
+ backdrop-filter: blur(4px);
+ -webkit-backdrop-filter: blur(5.4px);
+ padding: 1.5rem 2rem;
+ box-shadow: 0 8px 24px rgba(0, 0, 0, 0.34);
+ border-radius: 1rem;
+ position: absolute;
+ overflow: hidden;
+ bottom: 50rem;
+ left: 0;
+ right: 0;
+ margin-inline: auto;
+ opacity: 0;
+ backdrop-filter: blur(10px);
+ transition: opacity 1s 1s;
+}
+
+.card_description {
+ display: block;
+ font-size: .75rem;
+ margin-bottom: .25rem;
+ font-weight: 500;
+ color: #ffffffa4;
+ text-transform: uppercase;
+}
+
+.card_title {
+ font-size: 25px;
+ font-weight: 600;
+ color: rgb(255, 255, 255);
+ margin-bottom: .75rem;
+}
+
+.card_button {
+ text-decoration: none;
+ font-size: 1rem;
+ font-weight: 500;
+ color: rgba(214, 255, 10, 0.627);
+ transition: 0.3s;
+}
+
+.card_button:hover {
+ color: rgb(166, 255, 0);
+}
+
+.card_box:hover .card_content {
+ animation: show-data 1s forwards;
+ opacity: 1;
+ transition: opacity .3s;
+}
+
+.card_box:hover {
+ animation: remove-overflow 2s forwards;
+}
+
+.card_box:not(:hover) {
+ animation: show-overflow 2s forwards;
+}
+
+.card_box:not(:hover) .card_description {
+ animation: remove-color 1s forwards;
+}
+
+.card_box:not(:hover) .card_content {
+ animation: remove-data 1s forwards;
+}
+
+
+
+@keyframes show-data {
+
+ 50% {
+   transform: translateY(60rem);
+   background-color: rgba(0, 0, 0, 0);
+
+ }
+
+ 100% {
+   transform: translateY(54rem);
+
+ }
+}
+
+@keyframes remove-overflow {
+ to {
+   overflow: initial;
+ }
+}
+
+
+@keyframes remove-color {
+ 0% {
+
+   background: rgba(0, 0, 0, 0);
+   color: rgba(0, 0, 0, 0);
+ }
+
+ 50% {
+
+   background: rgba(0, 0, 0, 0);
+   color: #00000000;
+ }
+
+ 100% {
+
+   background: rgba(0, 0, 0, 0);
+   color: rgba(0, 0, 0, 0);
+ }
+}
+
+@keyframes remove-data {
+ 0% {
+   transform: translateY(49rem);
+   background: rgba(0, 0, 0, 0);
+   color: rgba(0, 0, 0, 0);
+ }
+
+ 50% {
+   transform: translateY(48rem);
+   width: 40px;
+   height: 40px;
+   border-radius: 50px;
+   background: rgba(0, 0, 0, 0);
+   border: 4px solid rgb(241, 78, 3);
+ }
+
+ 100% {
+   transform: translateY(55rem);
+   width: 40px;
+   height: 40px;
+   border: 4px solid rgb(241, 78, 3);
+ }
+}
+
+@keyframes show-overflow {
+ 0% {
+   overflow: initial;
+   pointer-events: none;
+ }
+
+ 50% {
+   overflow: hidden;
+ }
+}
+
+@media screen and (max-width: 340px) {
+   .grid_box {
+   margin-inline: 1rem;
+ }
+
+ .card_content {
+   width: 250px;
+   padding: 1rem;
+ }
+}
+
+@media screen and (min-width: 1120px) {
+   .grid_box {
+   height: 100vh;
+
+ }
+
+ .card {
+   width: 328px;
+   height: 583px;
+   overflow: hidden;
+   border-radius: 1.5rem;
+
+ }
+
+ .card_container {
+   grid-template-columns: repeat(3, 1fr);
+   column-gap: 50px;
+ }
+
+ .card_content {
+   padding-inline: 2.5rem;
+ }
+}
+.move{
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.title h1{
+   width: 300px;
+  text-align: center;
+  font-weight: 900;
+  margin-top: 30px; 
+  border-radius: 50%;
+  margin: auto;
+  border-bottom: 5px solid rgb(2, 235, 252);
+}
+
+.dub_card{
+   text-transform: capitalize;
+   transition: 0.3s;
+   cursor: pointer;
+}
+.dub_card img{
+   transition: 0.4s;
+}
+.dub_card:hover{
+   background: rgba(0, 0, 0, 0.086);
+}
+
+.dub_card:hover img{
+   transform: translatey(-10px);
+}
+.pages{
+   margin: 100px 0;
+}
+.myBg{
+   background: #45BEF2;
+}
